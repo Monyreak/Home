@@ -1,0 +1,102 @@
+.contact {
+    overflow: hidden;
+    width: 100%;
+    max-width: 65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.contactPageTitle {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.contactDes {
+    font-weight: 400;
+    font-size: 1.2rem;
+    max-width: 51rem;
+    margin-bottom: 1.5rem;
+}
+
+.contactForm {
+    width: 100%;
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.contactInput {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 2px solid rgb(200, 200, 200);
+    border-radius: 0.5rem;
+    outline: none;
+    color: white;
+    background-color: rgb(50, 50, 50);
+}
+
+input[type="text"].contactInput,
+input[type="email"].contactInput {
+    width: 60%;
+}
+
+.contactMessage {
+    width: 60%;
+    height: 12.5rem; /* Adjusted height to rem */
+    resize: vertical;
+}
+
+.contactSubmit {
+    background-color: rgb(50, 50, 50);
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.contactSubmit:hover {
+    background-color: rgb(80, 80, 80);
+}
+
+.contactIcons {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.contactIcons a {
+    color: white;
+    transition: color 0.2s;
+}
+
+.contactIcons a:hover {
+    color: rgb(80, 80, 80);
+}
+
+@media screen and (max-width: 720px) {
+    .contact {
+        padding: 1rem;
+    }
+    
+    .contactForm {
+        width: 90%;
+    }
+
+    input[type="text"].contactInput,
+    input[type="email"].contactInput,
+    .contactMessage {
+        width: 100%;
+    }
+}

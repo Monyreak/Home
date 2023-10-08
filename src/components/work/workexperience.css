@@ -1,0 +1,54 @@
+#workExperience {
+    overflow: hidden;
+    width: 100vw;
+    max-width: 65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.experienceTitle {
+    font-size: 3rem;
+    font-weight: 600;
+    padding-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.experienceDesc {
+    font-weight: 400;
+    font-size: 0.9rem;
+    max-width: 51rem;
+    padding: 0 2rem;
+}
+
+.experienceBoxes {
+    margin: 1.5rem;
+    width: 100vw;
+    max-width: 80%;
+    text-align: left;
+}
+
+.experienceBox {
+    display: flex;
+    margin: 1rem;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    background-color: rgb(50, 50, 50);
+}
+
+.experienceBoxText {
+    font-size: 0.9rem;
+    font-weight: 200;
+}
+
+@media screen and (max-width: 720px) {
+    .experienceBoxText > p {
+        font-size: 2vw;
+    }
+    .experienceBoxText {
+        font-size: 5vw;
+    }
+}

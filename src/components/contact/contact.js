@@ -9,13 +9,19 @@ const Contact = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-        emailjs.sendForm('service_g2tph3q', 'template_1p5mbfi', form.current, 'sxGNCjdwnIt1iNlO0')
+        emailjs.sendForm('service_g2tph3q', 'template_1p5mbfi', form.current, process.env.REACT_APP_EMAILJS_API_KEY)
             .then((result) => {
                 console.log(result.text);
+                // Reset the form
+                form.current.reset();
+                // Alert the user
+                alert('Message sent successfully!');
             }, (error) => {
                 console.log(error.text);
+                alert('Failed to send the message. Please try again later.');
             });
     };
+    
 
     return (
         <section id='contact' className='contact'>
@@ -30,10 +36,10 @@ const Contact = () => {
             </form>
 
             <div className="contactIcons">
-                <a href="https://www.linkedin.com/in/your-linkedin-id/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/monyreak-kit-ba56461a4" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faLinkedin} size="2x" />
                 </a>
-                <a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/Monyreak" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faGithub} size="2x" />
                 </a>
             </div>

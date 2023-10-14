@@ -70,3 +70,14 @@
         font-size: 4.5vw;
     }
 }
+
+.inlineLink {
+    color: #4C8BF5;  /* or any preferred color */
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: #3A6BCC;  /* a slightly darker shade for hover state */
+    }
+}

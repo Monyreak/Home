@@ -4,11 +4,13 @@ import './home.css'
 import btnImg from '../../assets/hireme.png'
 import { Link } from "react-scroll";
 
+const roles = [
+    "Computer Engineer",
+    "Software Engineer",
+    "Embedded System Engineer"
+];
 const Home = () => {
-    const roles = [
-        "Computer Engineer",
-        "Software Engineer",
-    ];
+ 
 
     const [currentRole, setCurrentRole] = useState("");
     const [roleIndex, setRoleIndex] = useState(0);
@@ -43,16 +45,16 @@ const Home = () => {
     return (
         <section id="home">
             <div className="introContent">
-                <span className="hello">Hello </span>
+                <span className="hello">Hello World</span>
                 <span className="introText">
-                    I'm Monyreak Kit <br/>
+                    I'm Monyreak Kit, <br/>
                     {currentRole}
                 </span>
                 
                 <p className="introPara">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br/>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    Welcome to my corner of the internet! I'm a passionate technologist, dedicated to turning ideas into reality and resolving problems with innovative solutions. With a robust background in computer engineering, I love exploring various domains and creating impactful projects. Have a look around and don't hesitate to get in touch!
                 </p>
-                <Link>
+                <Link to="contact">
                     <button className="btn">
                         <img src={btnImg} className="btnImg" alt=""/>Hire Me
                     </button>

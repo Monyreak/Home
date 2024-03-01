@@ -11,16 +11,19 @@ const WorkExperience = () => {
                 <div className="experienceBox">
                     <div className="experienceBoxText">
                         <h2>Tutor & Grader</h2>
-                        <h3>UC Santa Cruz</h3>
-                        <p>Guided students in system programming (CSE130), and graded coursework for CSE107 and CSE185E.</p>
+                        <h3>@ UC Santa Cruz, September 2023 - June 2024</h3>
+                        <p>Tutored and Graded in Probability Statistics CSE107, Technical Writing CSE185E, and Computer System Design CSE130; assisted students with C and Python assignments and assessed coursework</p>
                     </div>
                 </div>
                 <div className="experienceBox">
                     <div className="experienceBoxText">
-                        <h2>Administrative Assistant</h2>
-                        <h3>Dept. of Transport, Cambodia</h3>
-                        <p>Managed department communications, dispatched letters, and coordinated meetings.</p>
-                    </div>
+                        <h2>Software Engineering - Apprenticeship</h2>
+                        <h3>@ Tassel - Micro Volunteering, September - December 2023</h3>
+                        <p> • Developed an alumni messaging platform with a React.js interface, resolved previous bugs, developed UI and designed chatroom database using
+                        AWS Amplify’s DynamoDB <br/>
+                        • Implemented a node-based profanity filter for message moderation, effectively flagging inappropriate
+                        content in real-time before submission using AWS Amplify’s subscription</p>
+                    </div>  
                 </div>
             </div>
         </section>

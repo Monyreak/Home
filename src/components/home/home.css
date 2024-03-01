@@ -1,83 +1,106 @@
 #home {
-    height: calc( 100vh- 4rem);
+    height: calc(100vh - 4rem);
     width: 100vw;
     max-width: 75rem;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
-   
-
-}
-
-.bg {
-    position: absolute;
-    top: -4rem;
-    z-index: -1;
-    right: 0;
-    object-fit: cover;
-    height: 100vh;
-}
-
-.introContent{
-    height: 100vh;
-    width: 100vh;
-    padding: 2rem;
-    font-size:3rem;
-    font-weight:700;
     display: flex;
     flex-direction: column;
+    align-items: center; /* Centers children horizontally */
     justify-content: center;
+    padding: 4rem; /* Adds padding around the entire section */
 }
 
-.hello{
-    font-size: 1.75rem;
-    font-weight: 100;
+.aboutMeContainer {
+    width: 100%; /* Takes full width of the parent */
+    text-align: left; /* Aligns the title to the left */
+    padding-left: 20px; /* Adjusts the padding to ensure alignment with the content below */
+    margin-bottom: 20px; /* Adds some space between the title and the picture */
 }
 
-.introName {
-    color:orange;
-
-}
-.introPara{
-    font-size: medium;
-    font-weight: 300;
-    letter-spacing: 1px;
-    
+.aboutMeTitle {
+    font-size: 3rem; /* Adjusts the font size of the title */
+    font-weight: bold; /* Makes the title bold */
+    color: white; /* Adjusts the color if needed */
+    margin-bottom: 2rem; /* Removes default margins */
 }
 
-.btn {
-    background: white;
-    margin: 1rem 0;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 2rem ;
+.container {
+    display: flex;
+    align-items: center; /* Keeps the image and intro content aligned vertically */
+    justify-content: flex-start; /* Aligns content to the start (left) */
+    flex-wrap: wrap; /* Allows items to wrap if necessary */
+    padding-top: 2rem;
+    /* Other styles remain unchanged */
 }
 
-.btnImg {
+
+.profilePic {
+    border-radius: 50%;
+    width: 18.75rem; /* 300px / 16 = 18.75rem */
+    height: 18.75rem; /* 300px / 16 = 18.75rem */
     object-fit: cover;
-    margin: 0 0.25rem;
-    height: 1rem;
+    margin-right: 1.25rem; /* 20px / 16 = 1.25rem */
 }
 
-@media screen and (max-width:480px) {
-    .bg{
-        right: -20vw;
-    }
-    .introContent{
-        font-size:10vw;
-    }
-    .hello {
-        font-size: 4.5vw;
-    }
+.introContent {
+    max-width: 60%; /* Adjust as needed */
+    text-align: left; /* Aligns the text to the left */
 }
 
-.inlineLink {
-    color: #4C8BF5;  /* or any preferred color */
-    text-decoration: underline;
-    cursor: pointer;
-    transition: color 0.3s ease;
+.introText {
+    display: block; /* Ensures each span starts on a new line */
+    font-size: 2rem; /* Adjust as needed */
+    font-weight: 700;
+}
 
-    &:hover {
-        color: #3A6BCC;  /* a slightly darker shade for hover state */
+.introPara {
+    text-align: left;
+    min-height: 12.5rem; /* 200px / 16 = 12.5rem */
+    overflow: visible;
+    width: 100%;
+    margin: 1.25rem auto; /* 20px / 16 = 1.25rem */
+    font-size: 1.3rem; /* Adjust as needed */
+}
+
+.cursor {
+    display: inline-block;
+    background-color: white;
+    margin-left: 0.125rem; /* 2px / 16 = 0.125rem */
+    width: 0.125rem; /* 2px / 16 = 0.125rem */
+    height: 1em;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+@media screen and (max-width:720px) {
+    .profilePic {
+        width: 9.375rem; /* 150px / 16 = 9.375rem */
+        height: 9.375rem; /* 150px / 16 = 9.375rem */
+    }
+    
+    .aboutMeTitle {
+        font-size: 2rem;
+    }
+
+    .introContent, .introText {
+        font-size: 5vw; 
+        max-width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .introPara {
+        font-size: 4vw;
+        margin: 1.25rem 0.625rem; /* 20px / 16 = 1.25rem and 10px / 16 = 0.625rem */
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 4vw;
     }
 }

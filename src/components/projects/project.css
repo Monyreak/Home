@@ -1,52 +1,68 @@
 #proj {
-    padding: 3rem 0;
-    height: calc( 100vh- 4rem);
-    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-
+    justify-content: flex-start;
+    align-items: flex-start; 
+    width: 100vw;
+    max-width: 75rem;
+    margin: 0 auto;
+    text-align: left;
+    padding: 4rem;
 }
 
-
-#proj .projects .project {
-    text-decoration: none;
-    color: white;
-}
-
-.projTitle {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+.projTitle{
+    font-size: 3rem; /* Adjusted to use rem for consistency */
     font-weight: 600;
+    padding-top: 2rem; /* Adjusted padding for top spacing */
+    margin-bottom: 1.5rem; /* Space before the description */
 }
-
 .projDesc {
-    font-size: 1rem;
-    margin-bottom: 2rem;
+    font-weight: 400;
+    font-size: 1rem; /* Adjusted to use rem for consistency and readability */
+    max-width: 51rem;
+    margin-bottom: 2rem; /* Adds more space before boxes */
 }
 
 .projects {
     display: flex;
-    gap: 1.25rem;  /* 2rem was 32px, so 1.25rem is roughly the equivalent */
-    flex-wrap: wrap;
-    justify-content: center;
-    text-decoration: none !important;
-    color: white !important;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 65rem;
 }
 
 .project {
     background-color: rgb(50, 50, 50);
-    padding: 2rem;
-    border-radius: 0.3125rem;  /* 0.5rem was 8px, so 0.3125rem is roughly the equivalent */
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-    width: 15.625rem;  /* 250px / 16 = 15.625rem */
-    display: flex;
-    align-items: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.2s;
+    width: auto;
+}
 
-    &:hover {
-        transform: translateY(-0.625rem);  /* 10px / 16 = 0.625rem */
-    }
+.project a {
+    text-decoration: none;
+    color: white;
+    display: block; /* Makes the entire box clickable */
+    padding: 1.5rem;
+}
+
+.project:hover {
+    transform: translateY(-0.625rem);
+}
+
+.projectText h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.projectText p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 720px) {
+    .projTitle{
+        font-size: 2rem;}
+
 }

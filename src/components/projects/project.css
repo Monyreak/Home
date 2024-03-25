@@ -19,7 +19,7 @@
 }
 .projDesc {
     font-weight: 400;
-    font-size: 1rem; /* Adjusted to use rem for consistency and readability */
+    font-size: 1.5rem; /* Adjusted to use rem for consistency and readability */
     max-width: 51rem;
     margin-bottom: 2rem; /* Adds more space before boxes */
 }
